@@ -47,7 +47,7 @@ for method in lines:
     delete = re.search(r_delete, method)
 
     if models:
-        new_line = models.group() + '\n'
+        new_line = models.group() + '\n' + '\n'
         finds.append(new_line)
     if get:
         new_line = get.group() + ' '
@@ -62,7 +62,7 @@ for method in lines:
         new_line = delete.group() + ' '
         finds.append(new_line)
     if urls:
-        new_line = urls.group() + '\n'
+        new_line = urls.group() + '\n' + '\n'
         finds.append(new_line)
 
 with open(new_file, 'w') as f:

@@ -1,9 +1,9 @@
 import re
-filename = '/Users/kripley/Sites/wisetail-api-documentation/update_doc.txt'
+filename = '/Users/kripley/Sites/wisetail-api-documentation/Contents.md'
 temp_file = 'content.md'
 # First Regex
-regex_class = '[A-Z]\w*'
-
+regex_class = '\[\w*\s*\w*\s*\w*\]*'
+regex_delete = '(\[|\])'
 matches = []
 
 with open(filename, 'r') as f:
@@ -20,3 +20,9 @@ for line in lines:
 with open(temp_file, 'w') as f:
     f.seek(0)
     f.writelines(matches)
+
+with open(temp_file, 'r') as f:
+    lines = f.readlines()
+
+for line in lines:
+    place = re.sub(regex_delete, '')
