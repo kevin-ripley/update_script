@@ -1,5 +1,5 @@
 import re
-filename = '/Users/kripley/Sites/wisetail-api-documentation/Contents.md'
+filename = ''
 temp_file = 'content.md'
 # First Regex
 regex_class = '\[\w*\s*\w*\s*\w*\]*'
