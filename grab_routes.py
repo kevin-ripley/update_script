@@ -1,5 +1,5 @@
 import re
-filename = '/Users/kripley/Sites/wisetail-api/routes/api/api.php'
+filename = ''
 temp_file = 'routes.md'
 new_file = 'compare.md'
 # First Regex
